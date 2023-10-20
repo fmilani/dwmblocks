@@ -3,7 +3,7 @@ static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"",	"sb-memory",	10,	14},
 
-	{"", "date '+%b %d (%a) %I:%M%p'",					5,		0},
+	{"",	"sb-clock",	5,	1},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
