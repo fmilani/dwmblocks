@@ -1,6 +1,6 @@
 #!/bin/sh
 case $1 in
-	1) tmux-launch home volume pulsemixer ;;
+	1) tmux-launch volume pulsemixer ;;
 	2) wpctl set-mute @DEFAULT_SINK@ toggle ;;
 	4) wpctl set-volume @DEFAULT_SINK@ 1%+ ;;
 	5) wpctl set-volume @DEFAULT_SINK@ 1%- ;;

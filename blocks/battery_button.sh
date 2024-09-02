@@ -40,6 +40,7 @@ notify_remaining() {
 }
 
 notify_brightness() {
+    [ ! -f /tmp/brightness_notification_id ] && echo 0 > /tmp/brightness_notification_id
     local brightness_notification_id=$(cat /tmp/brightness_notification_id)
     brightness_notification_id=$(notify-send -p -r "$brightness_notification_id" -h int:value:"$(xbacklight)" "Screen Brightness")
     echo "$brightness_notification_id" > /tmp/brightness_notification_id
