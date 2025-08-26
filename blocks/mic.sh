@@ -9,5 +9,7 @@ MUTE_STATE=$(pactl get-source-mute "$SOURCE" | awk '{print $2}')
 # Toggle mute
 if [ "$MUTE_STATE" = "yes" ]; then
   echo "🤐"
+else
+  echo "🎤"
 fi
 
