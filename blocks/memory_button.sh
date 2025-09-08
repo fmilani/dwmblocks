@@ -2,7 +2,7 @@
 
 case $1 in
 	1) ps -eo rss,args --no-headers \
-  | awk -v maxlen=20 '{
+  | awk -v maxlen=60 '{
     rss = $1
     $1 = ""
     sub(/^ /, "", $0)
@@ -29,6 +29,7 @@ case $1 in
   }' \
   | sort -rn | head -n 20 \
 		| dmenu -p "pkill -15" -l 20 | awk -F ' - ' '{print $2}' \
+		| awk -F ' ' '{print $1}' \
 		| xargs pkill ;;
 	3) tmux-launch mem htop ;;
 esac
