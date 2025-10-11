@@ -1,4 +1,4 @@
 #!/bin/bash
 
-free -h | sed -n '2{p;q}' | awk '{printf ("🧠 %.2fG", $3)}'
+free -h | sed -n '2{p;q}' | awk '{printf ("🧠 %.1fG", $3)}'
 
