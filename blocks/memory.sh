@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
-free -h | sed -n '2{p;q}' | awk '{printf ("🧠 %.1fG", $3)}'
+free --mebi | sed -n '2{p;q}' | awk '{printf ("🧠 %.2fG", ($3 / 1024))}'
 
